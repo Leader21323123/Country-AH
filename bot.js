@@ -27,5 +27,8 @@ client.user.setGame(` Country AH.`,"http://twitch.tv/S-F")
   console.log('')
   console.log('')
 });
+client.on('ready',  () => {
+client.user.setUsername("Country - AH")
+      })
 
 client.login(process.env.BOT_TOKEN);
