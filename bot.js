@@ -27,8 +27,27 @@ client.user.setGame(` Country AH.`,"http://twitch.tv/S-F")
   console.log('')
   console.log('')
 });
-client.on('ready',  () => {
-client.user.setUsername("Country - AH")
-      })
 
+client.on("ready", async  => {
+setInterval(function(){
+client.channels.find('id', '472413819910750209').setName("W");
+client.channels.find('id', '472413819910750209').setName("We");
+client.channels.find('id', '472413819910750209').setName("Wel");
+client.channels.find('id', '472413819910750209').setName("Welc");
+client.channels.find('id', '472413819910750209').setName("Welco");
+client.channels.find('id', '472413819910750209').setName("Welcom");
+client.channels.find('id', '472413819910750209').setName("Welcome");
+client.channels.find('id', '472413819910750209').setName("Welcome T");
+client.channels.find('id', '472413819910750209').setName("Welcome To");
+client.channels.find('id', '472413819910750209').setName("Welcome To C");
+client.channels.find('id', '472413819910750209').setName("Welcome To Co");
+client.channels.find('id', '472413819910750209').setName("Welcome To Cou");
+client.channels.find('id', '472413819910750209').setName("Welcome To Coun");
+client.channels.find('id', '472413819910750209').setName("Welcome To Count");
+client.channels.find('id', '472413819910750209').setName("Welcome To Countr");
+client.channels.find('id', '472413819910750209').setName("Welcome To Country");
+client.channels.find('id', '472413819910750209').setName("Welcome To Country A");
+client.channels.find('id', '472413819910750209').setName("Welcome To Country AH");
+   }, 3000);
+});
 client.login(process.env.BOT_TOKEN);
