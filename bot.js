@@ -77,11 +77,46 @@ if(message.content.startsWith("الرابط") || message.content.startsWith("ر�
       message.author.sendEmbed(Embed11)
     }
 });
+Client.on("message", message => {
+    var prefix = "a";
+ 
+            var args = message.content.substring(prefix.length).split(" ");
+            if (message.content.startsWith(prefix - "bc")) {
+                         if (!message.member.hasPermission("ADMINISTRATOR"))  return;
+ if (!args[1]) {
+                                let embed3 = new Discord.RichEmbed()
+                                .setDescription(":white_check_mark: | تم ارسال رساله فارغه")
+                                .setColor("#FF0000")
+                                message.channel.sendEmbed(embed3);
+                            } else {
 
-
-
-
-
+                            let embed4 = new Discord.RichEmbed()
+                                                            .setDescription(':white_check_mark: | تم إرسال البرودكاست')
+                                                            .setColor("#008000")
+                                message.channel.sendEmbed(embed4);
+                                                      message.delete();
+                            }
+                          }
+});
+let rebel;
+client.on("ready", async  => {
+    let guild = client.guilds.get("415466107726462977");
+  let users = guild.members.map(member => member.user.id);
+  let i;
+  rebel=0;
+for (i=0 ; i < users.length ; i++) {
+ let   check = guild.members.get(users[i]);
+if(!check.voiceChannelID){
+        continue;
+}else{
+  rebel++;
+}
+}
+client.channels.find('id', '472426060332531720').setName(" . "+rebel+" المتوآجدين بالرومآت الصوتيهه ");
+  client.setInterval(() =>{
+    let d = Date.now()
+  }, 5000);
+});
 
 
 
