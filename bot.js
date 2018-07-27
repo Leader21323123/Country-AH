@@ -64,7 +64,6 @@ if(message.content.startsWith("الرابط") || message.content.startsWith("ر�
     const embed = new Discord.RichEmbed()
         .setColor("2fff00")
         .setDescription("| :white_check_mark:  | :heart:  تم ارسال الرابط على الخاص  ")
-        .setFooter("67N-KINGDOM")
       message.channel.sendEmbed(embed).then(message => {message.delete(10000)})
               const Embed11 = new Discord.RichEmbed()
         .setColor("2fff00")
@@ -97,25 +96,6 @@ Client.on("message", message => {
                                                       message.delete();
                             }
                           }
-});
-let rebel;
-client.on("ready", async  => {
-    let guild = client.guilds.get("415466107726462977");
-  let users = guild.members.map(member => member.user.id);
-  let i;
-  rebel=0;
-for (i=0 ; i < users.length ; i++) {
- let   check = guild.members.get(users[i]);
-if(!check.voiceChannelID){
-        continue;
-}else{
-  rebel++;
-}
-}
-client.channels.find('id', '472426060332531720').setName(" . "+rebel+" المتوآجدين بالرومآت الصوتيهه ");
-  client.setInterval(() =>{
-    let d = Date.now()
-  }, 5000);
 });
 
 
