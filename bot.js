@@ -105,35 +105,5 @@ if(message.content.startsWith("الرابط") || message.content.startsWith("ر�
       message.author.sendEmbed(Embed11)
     }
 });
-let rebel;
-client.on("ready", async  => {
-    let guild = client.guilds.get("415466107726462977");
-  let users = guild.members.map(member => member.user.id);
-  let i;
-  rebel=0;
-for (i=0 ; i < users.length ; i++) {
- let   check = guild.members.get(users[i]);
-if(!check.voiceChannelID){
-        continue;
-}else{
-  rebel++;
-}
-}
-client.channels.find('id', '472426060332531720').setName(" . "+rebel+" المتوآجدين بالرومآت الصوتيهه ");
-  client.setInterval(() =>{
-    let d = Date.now()
-  }, 5000);
-});
-client.on('voiceStateUpdate', (oldMember, newMember) => {
-    let guild = client.guilds.get("415466107726462977");
-let newUserChannel = newMember.voiceChannel
-let oldUserChannel = oldMember.voiceChannel
- if(oldUserChannel === undefined && newUserChannel !== undefined) {
-   rebel++;
-client.channels.find('id', '472426060332531720').setName(" . "+rebel+" المتوآجدين بالرومآت الصوتيهه ");
-} else if(newUserChannel === undefined){
-  rebel--;
-client.channels.find('id', '472426060332531720').setName(" . "+rebel+" المتوآجدين بالرومآت الصوتيهه ");
-}
-});
+
 client.login(process.env.BOT_TOKEN);
